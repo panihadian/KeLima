@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#0284c7" />
+    <meta name="description" content="LaundryKu - Layanan laundry kiloan modern dengan jemput-antar. Cepat, bersih, harum, dan ramah di kantong." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Perbaikan: Hapus %PUBLIC_URL%/ diganti menjadi ./ (relatif) atau langsung nama file -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>LaundryKu — Laundry Kiloan Cepat & Wangi, Tinggal Jemput!</title>
+    <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
+    <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- NAV -->
+    <header class="nav" data-testid="main-nav">
+      <div class="container nav-inner">
+        <a href="#hero" class="brand" data-testid="brand-logo">
+          <span class="brand-mark"><i class="fa-solid fa-bubble"></i><i class="fa-solid fa-soap"></i></span>
+          <span class="brand-name">Laundry<span class="brand-name-accent">Ku</span></span>
+        </a>
+        <nav class="nav-links">
+          <a href="#layanan" data-testid="nav-layanan">Layanan</a>
+          <a href="#cara" data-testid="nav-cara">Cara Pesan</a>
+          <a href="#kalkulator" data-testid="nav-kalkulator">Kalkulator</a>
+          <a href="#testimoni" data-testid="nav-testimoni">Testimoni</a>
+          <a href="#kontak" data-testid="nav-kontak">Kontak</a>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="#kalkulator" data-testid="nav-cta-order">
+          <i class="fa-solid fa-bolt"></i> Order
+        </a>
+        <button class="nav-burger" id="navBurger" aria-label="Menu" data-testid="nav-burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-grain"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="pill" data-testid="hero-pill">
+            <span class="pill-dot"></span> Jemput-Antar GRATIS area kota
+          </span>
+          <h1 class="hero-title" data-testid="hero-title">
+            Laundry-an? <br />
+            <span class="grad-text">Tinggal rebahan,</span><br />
+            kita yang jemput.
+          </h1>
+          <p class="hero-sub" data-testid="hero-sub">
+            Cuci kiloan kilat, wangi tahan lama, harga transparan. Hitung dulu, pesan langsung lewat WhatsApp. Easy, no drama.
+          </p>
+          <div class="hero-cta">
+            <a href="#kalkulator" class="btn btn-primary btn-lg" data-testid="hero-cta-hitung">
+              <i class="fa-solid fa-calculator"></i> Hitung Sekarang
+            </a>
+            <a href="#layanan" class="btn btn-ghost btn-lg" data-testid="hero-cta-layanan">
+              Lihat Layanan <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat" data-testid="stat-pelanggan"><strong>5K+</strong><span>Pelanggan happy</span></div>
+            <div class="stat" data-testid="stat-rating"><strong>4.9★</strong><span>Rating rata-rata</span></div>
+            <div class="stat" data-testid="stat-jemput"><strong>60 min</strong><span>Jemput tercepat</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bubble-card">
+            <div class="machine">
+              <div class="machine-top">
+                <span class="led"></span>
+                <span class="led led-2"></span>
+                <span class="machine-label">SPIN</span>
+              </div>
+              <div class="machine-door">
+                <div class="machine-drum">
+                  <span class="clothes c1"></span>
+                  <span class="clothes c2"></span>
+                  <span class="clothes c3"></span>
+                </div>
+              </div>
+              <div class="machine-bottom">
+                <span class="knob"></span>
+                <span class="screen">WASH 32°</span>
+              </div>
+            </div>
+            <span class="bubble b1"></span>
+            <span class="bubble b2"></span>
+            <span class="bubble b3"></span>
+            <span class="bubble b4"></span>
+            <span class="bubble b5"></span>
+            <div class="float-badge">
+              <i class="fa-solid fa-leaf"></i> Eco Friendly
+            </div>
+            <div class="float-badge float-badge-2">
+              <i class="fa-solid fa-clock"></i> Express 6 Jam
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>✨ Wangi tahan 7 hari</span><span>•</span>
+        <span>🚀 Express 6 jam siap</span><span>•</span>
+        <span>💸 Diskon 15% di atas 10 kg</span><span>•</span>
+        <span>🧺 Jemput-Antar gratis</span><span>•</span>
+        <span>🌿 Detergen ramah kulit</span><span>•</span>
+        <span>✨ Wangi tahan 7 hari</span><span>•</span>
+        <span>🚀 Express 6 jam siap</span><span>•</span>
+        <span>💸 Diskon 15% di atas 10 kg</span><span>•</span>
+        <span>🧺 Jemput-Antar gratis</span><span>•</span>
+        <span>🌿 Detergen ramah kulit</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- LAYANAN -->
+    <section id="layanan" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-testid="layanan-eyebrow">— LAYANAN KAMI</span>
+          <h2 class="section-title" data-testid="layanan-title">Pilih sesuai mood cucianmu.</h2>
+          <p class="section-sub">Semua harga per-kilogram. Transparan, no hidden cost, no drama.</p>
+        </div>
+        <div class="services" data-testid="services-grid">
+          <article class="svc-card" data-testid="svc-cuci-kering">
+            <div class="svc-icon svc-icon-1"><i class="fa-solid fa-shirt"></i></div>
+            <h3>Cuci Kering</h3>
+            <p>Cucian bersih & kering, siap kamu setrika sendiri di rumah.</p>
+            <div class="svc-price"><span>Rp 5.000</span><small>/kg</small></div>
+            <a href="#kalkulator" class="svc-link" data-testid="svc-cta-cuci-kering">Pesan ini <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="svc-card" data-testid="svc-cuci-setrika">
+            <div class="svc-icon svc-icon-2"><i class="fa-solid fa-soap"></i></div>
+            <h3>Cuci + Setrika</h3>
+            <p>Paket favorit: dicuci, dikeringkan, lalu disetrika rapi. Tinggal pakai.</p>
+            <div class="svc-price"><span>Rp 7.000</span><small>/kg</small></div>
+            <span class="svc-tag">Paling Laris</span>
+            <a href="#kalkulator" class="svc-link" data-testid="svc-cta-cuci-setrika">Pesan ini <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="svc-card" data-testid="svc-setrika">
+            <div class="svc-icon svc-icon-3"><i class="fa-solid fa-fire"></i></div>
+            <h3>Setrika Saja</h3>
+            <p>Pakaian sudah bersih? Biar kami yang setrika hingga lurus mulus.</p>
+            <div class="svc-price"><span>Rp 4.000</span><small>/kg</small></div>
+            <a href="#kalkulator" class="svc-link" data-testid="svc-cta-setrika">Pesan ini <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="svc-card svc-featured" data-testid="svc-express">
+            <div class="svc-icon svc-icon-4"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Express 6 Jam</h3>
+            <p>Butuh kilat? Cucian beres dalam 6 jam, ready buat acara mendadak.</p>
+            <div class="svc-price"><span>Rp 12.000</span><small>/kg</small></div>
+            <span class="svc-tag svc-tag-hot">Tercepat</span>
+            <a href="#kalkulator" class="svc-link" data-testid="svc-cta-express">Pesan ini <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="svc-card" data-testid="svc-dryclean">
+            <div class="svc-icon svc-icon-5"><i class="fa-solid fa-sparkles"></i></div>
+            <h3>Dry Clean</h3>
+            <p>Aman untuk jas, gaun, blazer, dan bahan premium. Treatment khusus.</p>
+            <div class="svc-price"><span>Rp 15.000</span><small>/kg</small></div>
+            <a href="#kalkulator" class="svc-link" data-testid="svc-cta-dryclean">Pesan ini <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="svc-card svc-promo" data-testid="svc-promo">
+            <div class="svc-icon svc-icon-6"><i class="fa-solid fa-gift"></i></div>
+            <h3>Diskon Member</h3>
+            <p>Auto dapet diskon: <b>5 kg = 10% off</b>, <b>10 kg = 15% off</b>. Cuan!</p>
+            <div class="svc-price svc-price-promo"><span>Hemat 15%</span></div>
+            <a href="#kalkulator" class="svc-link" data-testid="svc-cta-promo">Coba kalkulator <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARA PESAN -->
+    <section id="cara" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">— CARA PESAN</span>
+          <h2 class="section-title">4 langkah, cucian beres.</h2>
+        </div>
+        <ol class="steps" data-testid="steps-list">
+          <li class="step" data-testid="step-1">
+            <span class="step-num">01</span>
+            <div class="step-icon"><i class="fa-solid fa-calculator"></i></div>
+            <h4>Hitung di kalkulator</h4>
+            <p>Pilih jenis baju, layanan, dan berat. Total muncul real-time.</p>
+          </li>
+          <li class="step" data-testid="step-2">
+            <span class="step-num">02</span>
+            <div class="step-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <h4>Klik order via WA</h4>
+            <p>Otomatis terkirim ke admin lengkap dengan rincian pesanan kamu.</p>
+          </li>
+          <li class="step" data-testid="step-3">
+            <span class="step-num">03</span>
+            <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <h4>Tim kami jemput</h4>
+            <p>Kurir datang ke alamatmu, ambil cucian, langsung diproses.</p>
+          </li>
+          <li class="step" data-testid="step-4">
+            <span class="step-num">04</span>
+            <div class="step-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <h4>Antar wangi ke rumah</h4>
+            <p>Cucian bersih & wangi diantar balik. Bayar di tempat. Done!</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- KALKULATOR -->
+    <section id="kalkulator" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">— KALKULATOR ORDER</span>
+          <h2 class="section-title">Hitung & pesan dalam <span class="grad-text">satu klik.</span></h2>
+          <p class="section-sub">Tambahkan item sebanyak yang kamu mau. Diskon otomatis kalau total ≥ 5 kg.</p>
+        </div>
+
+        <div class="calc-wrap">
+          <div class="calc-card" data-testid="calculator-card">
+            <div class="calc-items" id="calcItems"></div>
+
+            <button class="btn btn-add" id="addItemBtn" data-testid="add-item-btn">
+              <i class="fa-solid fa-plus"></i> Tambah Item
+            </button>
+
+            <div class="calc-divider"></div>
+
+            <div class="calc-form">
+              <div class="form-row">
+                <label for="custName">Nama Kamu</label>
+                <input id="custName" type="text" placeholder="Nama lengkap" data-testid="input-name" autocomplete="name" />
+              </div>
+              <div class="form-row">
+                <label for="custPhone">No. WhatsApp</label>
+                <input id="custPhone" type="tel" placeholder="08xxxxxxxxxx" data-testid="input-phone" autocomplete="tel" />
+              </div>
+              <div class="form-row form-row-full">
+                <label for="deliveryMethod">Metode Layanan</label>
+                <select id="deliveryMethod" data-testid="input-delivery">
+                  <option value="Jemput & Antar">Jemput & Antar ke Alamat (Gratis area kota)</option>
+                  <option value="Antar Sendiri">Antar & Ambil Sendiri ke Outlet</option>
+                </select>
+              </div>
+              <div class="form-row form-row-full" id="addressRow">
+                <label for="custAddress">Alamat Jemput & Antar</label>
+                <textarea id="custAddress" rows="2" placeholder="Jl. Mawar No. 12, Kel. ABC, Kec. XYZ" data-testid="input-address"></textarea>
+              </div>
+              <div class="form-row form-row-full">
+                <label for="custNote">Catatan (opsional)</label>
+                <input id="custNote" type="text" placeholder="Misal: pisahkan baju putih, tidak pakai pelembut, dll." data-testid="input-note" />
+              </div>
+            </div>
+          </div>
+
+          <aside class="summary-card" data-testid="summary-card">
+            <h3 class="summary-title"><i class="fa-solid fa-receipt"></i> Ringkasan Order</h3>
+            <ul class="summary-list" id="summaryList"></ul>
+
+            <div class="summary-row"><span>Total Berat</span><b id="sumWeight" data-testid="sum-weight">0 kg</b></div>
+            <div class="summary-row"><span>Subtotal</span><b id="sumSubtotal" data-testid="sum-subtotal">Rp 0</b></div>
+            <div class="summary-row summary-discount" id="discountRow" style="display:none">
+              <span>Diskon <small id="discountLabel"></small></span>
+              <b id="sumDiscount" data-testid="sum-discount">- Rp 0</b>
+            </div>
+            <div class="summary-total">
+              <span>Total Bayar</span>
+              <b id="sumTotal" data-testid="sum-total">Rp 0</b>
+            </div>
+
+            <div class="discount-tier" id="discountTier" data-testid="discount-tier"></div>
+
+            <a id="orderBtn" class="btn btn-wa btn-lg" href="#" data-testid="order-wa-btn">
+              <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </a>
+            <p class="summary-foot">Pesananmu akan otomatis terkirim ke admin LaundryKu.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI + RATING -->
+    <section id="testimoni" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">— RATING & TESTIMONI</span>
+          <h2 class="section-title">Kata mereka soal LaundryKu.</h2>
+          <div class="rating-avg" data-testid="rating-avg">
+            <div class="rating-avg-num" id="ratingAvgNum">4.9</div>
+            <div>
+              <div class="rating-avg-stars" id="ratingAvgStars"></div>
+              <div class="rating-avg-meta"><span id="ratingCount">0</span> ulasan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-grid" id="testiGrid" data-testid="testi-grid"></div>
+
+        <div class="rating-form-card" data-testid="rating-form-card">
+          <h3><i class="fa-solid fa-pen-to-square"></i> Tulis ulasan kamu</h3>
+          <div class="rating-stars" id="ratingInput" data-testid="rating-stars-input">
+            <button type="button" data-star="1" aria-label="1 bintang"><i class="fa-regular fa-star"></i></button>
+            <button type="button" data-star="2" aria-label="2 bintang"><i class="fa-regular fa-star"></i></button>
+            <button type="button" data-star="3" aria-label="3 bintang"><i class="fa-regular fa-star"></i></button>
+            <button type="button" data-star="4" aria-label="4 bintang"><i class="fa-regular fa-star"></i></button>
+            <button type="button" data-star="5" aria-label="5 bintang"><i class="fa-regular fa-star"></i></button>
+          </div>
+          <div class="form-grid">
+            <input id="reviewerName" type="text" placeholder="Nama kamu" data-testid="reviewer-name" />
+            <input id="reviewerCity" type="text" placeholder="Kota / domisili (opsional)" data-testid="reviewer-city" />
+          </div>
+          <textarea id="reviewerText" rows="3" placeholder="Ceritain pengalamanmu pakai LaundryKu..." data-testid="reviewer-text"></textarea>
+          <button class="btn btn-primary" id="submitReview" data-testid="submit-review">
+            <i class="fa-solid fa-paper-plane"></i> Kirim Ulasan
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK / CTA -->
+    <section id="kontak" class="section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <span class="eyebrow">— SIAP MELAYANI</span>
+            <h2 class="section-title">Yuk, drop cucian kamu sekarang.</h2>
+            <p>Hubungi admin LaundryKu untuk reservasi jemput atau tanya-tanya santai.</p>
+            <ul class="contact-list">
+              <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/6289604665197" target="_blank" rel="noopener" data-testid="contact-wa">+62 896-0466-5197</a></li>
+              <li><i class="fa-solid fa-clock"></i> Buka tiap hari, 07:00 – 21:00 WIB</li>
+              <li><i class="fa-solid fa-location-dot"></i> Area layanan: dalam kota + radius 5 km</li>
+            </ul>
+            <a href="https://wa.me/6289604665197?text=Halo%20LaundryKu%2C%20saya%20mau%20tanya-tanya%20dulu%20nih." target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-testid="contact-cta-wa">
+              <i class="fa-brands fa-whatsapp"></i> Chat Admin Sekarang
+            </a>
+          </div>
+          <div class="contact-visual" aria-hidden="true">
+            <div class="contact-blob"></div>
+            <div class="contact-icon-1"><i class="fa-solid fa-shirt"></i></div>
+            <div class="contact-icon-2"><i class="fa-solid fa-soap"></i></div>
+            <div class="contact-icon-3"><i class="fa-solid fa-bolt"></i></div>
+            <div class="contact-icon-4"><i class="fa-brands fa-whatsapp"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand">
+            <span class="brand-mark"><i class="fa-solid fa-soap"></i></span>
+            <span class="brand-name">Laundry<span class="brand-name-accent">Ku</span></span>
+          </div>
+          <p class="footer-tag">Cuci tanpa pusing. Kami yang urus, kamu yang santai.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h5>Menu</h5>
+            <a href="#layanan">Layanan</a>
+            <a href="#cara">Cara Pesan</a>
+            <a href="#kalkulator">Kalkulator</a>
+            <a href="#testimoni">Testimoni</a>
+          </div>
+          <div>
+            <h5>Kontak</h5>
+            <a href="https://wa.me/6289604665197" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#kontak">Lokasi</a>
+            <a href="#kontak">Jam Operasional</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> LaundryKu — Made with bubbles &amp; love.</div>
+    </footer>
+
+    <!-- Floating WA -->
+    <a href="https://wa.me/6289604665197?text=Halo%20LaundryKu%2C%20saya%20mau%20order%20laundry." target="_blank" rel="noopener" class="float-wa" data-testid="float-wa-btn" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" data-testid="toast"></div>
+
+    <div id="root"></div>
+    <!-- Perbaikan: Hapus %PUBLIC_URL%/ diganti menjadi ./ (relatif) atau langsung nama file -->
+    <script src="script.js"></script>
+  </body>
+</html>
